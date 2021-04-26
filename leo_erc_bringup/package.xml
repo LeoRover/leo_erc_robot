@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>leo_erc_bringup</name>
+  <version>0.0.0</version>
+  <description>
+    Scripts and launch files for starting basic Leo Rover (ERC edition) functionalities. 
+  </description>
+
+  <maintainer email="support@fictionlab.pl">Fictionlab</maintainer>
+  <author email="blazej@fictionlab.pl">Błażej Sowa</author>
+
+  <license>MIT</license>
+
+  <url type="bugtracker">https://github.com/LeoRover/leo_erc_robot/issues</url>
+  <url type="repository">https://github.com/LeoRover/leo_erc_robot</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>web_video_server</exec_depend>
+  <exec_depend>rosserial_python</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <exec_depend>leo_bringup</exec_depend>
+  <exec_depend>leo_erc_description</exec_depend>
+
+  <!-- <exec_depend>raspicam_node</exec_depend> -->
+  <!-- <exec_depend>zed_wrapper</exec_depend> -->
+
+</package>

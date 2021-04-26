@@ -1,0 +1,10 @@
+<launch>
+
+  <node name="zed2"
+        pkg="zed_wrapper"
+        type="zed_wrapper_node"
+        respawn="true">
+    <rosparam command="load" file="$(find leo_erc_bringup)/config/zed2.yaml"/>
+  </node>
+
+</launch>

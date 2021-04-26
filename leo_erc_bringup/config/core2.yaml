@@ -1,0 +1,17 @@
+core2:
+  robot_frame_id: "base_link"
+  odom_frame_id: "odom"
+
+  diff_drive:
+    wheel_radius: 0.0625
+    wheel_separation: 0.33
+    angular_velocity_multiplier: 1.91
+    input_timeout: 500.0
+
+  motors:
+    encoder_resolution: 878.4
+    encoder_pullup: 1
+    max_speed: 800.0
+    pid: {p: 0.0, i: 0.005, d: 0.0}
+    power_limit: 1000.0
+    torque_limit: 1000.0
