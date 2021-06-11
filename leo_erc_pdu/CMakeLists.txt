@@ -10,3 +10,8 @@ install(
     launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+catkin_install_python(PROGRAMS 
+  scripts/pdu_driver.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
