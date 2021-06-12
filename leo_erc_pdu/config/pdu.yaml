@@ -2,4 +2,4 @@ pdu:
   ID: 0
   Max_Torque: 100
   Moving_Speed: 100
-  Status_Led: 1
+  Led: 1
