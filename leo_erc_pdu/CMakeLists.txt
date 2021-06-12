@@ -12,6 +12,6 @@ install(
 )
 
 catkin_install_python(PROGRAMS 
-  scripts/pdu_driver.py
+  scripts/pdu_driver
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
