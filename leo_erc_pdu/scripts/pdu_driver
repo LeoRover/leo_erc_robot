@@ -23,7 +23,7 @@ def pdu_callback(msg):
         return
 
     probe_cnt += 1
-    dynamixel_client(id=0, addr_name="Goal_Position", value=step_angle)
+    dynamixel_client(id=0, addr_name="Goal_Position", value=probe_cnt*step_angle)
     pdu_dropped_pub.publish(probe_cnt)
 
 
