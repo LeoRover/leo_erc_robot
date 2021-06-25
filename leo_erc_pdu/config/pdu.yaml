@@ -1,0 +1,5 @@
+pdu:
+  ID: 0
+  Max_Torque: 100
+  Moving_Speed: 100
+  LED: 1

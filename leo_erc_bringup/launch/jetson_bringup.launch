@@ -7,4 +7,6 @@
     <rosparam command="load" file="$(find leo_erc_bringup)/config/zed2.yaml"/>
   </node>
 
+  <include file="$(find leo_erc_pdu)/launch/pdu.launch" />
+
 </launch>

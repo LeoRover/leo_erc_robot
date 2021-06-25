@@ -1,0 +1,21 @@
+<launch>
+
+  <arg name="usb_port"                default="/dev/ttyUSB0"/>
+  <arg name="dxl_baud_rate"           default="1000000"/>
+  <arg name="namespace"               default="dynamixel_driver"/>
+
+  <param name="dynamixel_info"          value="$(find leo_erc_pdu)/config/pdu.yaml"/>
+
+  <node name="$(arg namespace)" pkg="dynamixel_workbench_controllers" type="dynamixel_workbench_controllers"
+        required="false" output="screen" args="$(arg usb_port) $(arg dxl_baud_rate)">
+    <param name="use_joint_states_topic"  value="false"/>
+    <param name="publish_period" value="0.010"/>
+    <param name="dxl_read_period" value="0.010"/>
+    <param name="dxl_write_period" value="0.010"/>
+  </node>
+
+  <node name="pdu_node"
+      pkg="leo_erc_pdu"
+      type="pdu_driver"/>
+
+</launch>
