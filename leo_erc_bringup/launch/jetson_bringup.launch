@@ -7,9 +7,9 @@
     <rosparam command="load" file="$(find leo_erc_bringup)/config/zed2.yaml"/>
   </node>
 
-  <node name="zed_odom"
+  <node name="zed_odom_node"
         pkg="leo_erc_bringup"
-        type="zed_odom_node"
+        type="zed_odom"
         respawn="true">
   </node>
 
