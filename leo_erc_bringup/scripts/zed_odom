@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import rospy
+from std_msgs.msg import Empty
+from zed_interfaces.srv import reset_odometry
+
+
+def reset_odom_callback(msg):
+    try:
+        log = zed_odom_client()
+    except:
+        rospy.logerr("zed oddom service unavailable")
+        return
+
+    if log.reset_odom:
+        rospy.loginfo("zed odom reset done")
+    else:
+        rospy.logerr("zed odom reset failed")
+
+
+rospy.init_node("zed2_odom_reset")
+
+
+zed_odom_client = rospy.ServiceProxy("zed2/reset_odometry", reset_odometry)
+
+reset_odom_sub = rospy.Subscriber("zed2/reset_odometry", Empty, reset_odom_callback)
+
+rospy.spin()
