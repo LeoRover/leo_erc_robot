@@ -12,7 +12,7 @@ def reset_odom_callback(msg):
         rospy.logerr("zed oddom service unavailable")
         return
 
-    if log.reset_odom:
+    if log.reset_done:
         rospy.loginfo("zed odom reset done")
     else:
         rospy.logerr("zed odom reset failed")
