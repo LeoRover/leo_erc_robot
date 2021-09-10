@@ -21,7 +21,7 @@ def reset_odom_callback(msg):
 rospy.init_node("zed2_odom_reset")
 
 
-zed_odom_client = rospy.ServiceProxy("zed2/reset_odometry", reset_odometry)
+zed_odom_client = rospy.ServiceProxy("zed2/reset_tracking", reset_odometry)
 
 reset_odom_sub = rospy.Subscriber("zed2/reset_odometry", Empty, reset_odom_callback)
 
