@@ -13,7 +13,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>dynamixel_sdk</exec_depend>
-  <exec_depend>dynamixel_workbench</exec_depend>
   <exec_depend>dynamixel_workbench_msgs</exec_depend>
+  <exec_depend>dynamixel_workbench_controllers</exec_depend>
   
 </package>
